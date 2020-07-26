@@ -28,4 +28,17 @@ class HomeController extends Controller
 
         return back();
     }
+
+    public function updatePassword()
+    {
+        $attributes = request()->validate([
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
+
+        auth()->user()->password = $attributes['password'];
+
+        auth()->user()->save();
+
+        return back();
+    }
 }
