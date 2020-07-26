@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Hash;
 
 class HomeController extends Controller
 {
@@ -35,7 +36,7 @@ class HomeController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
 
-        auth()->user()->password = $attributes['password'];
+        auth()->user()->password = Hash::make($attributes['password']);
 
         auth()->user()->save();
 
