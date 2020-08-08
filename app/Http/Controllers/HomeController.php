@@ -26,6 +26,7 @@ class HomeController extends Controller
         auth()->user()->email = $attributes['email'];
 
         auth()->user()->save();
+        request()->session()->flash('status', 'Updated successful!');
 
         return back();
     }
@@ -39,6 +40,7 @@ class HomeController extends Controller
         auth()->user()->password = Hash::make($attributes['password']);
 
         auth()->user()->save();
+        request()->session()->flash('status', 'Password updated successful!');
 
         return back();
     }
