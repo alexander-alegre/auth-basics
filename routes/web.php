@@ -23,3 +23,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/update_profile', 'HomeController@updateProfile')->name('update_profile');
 Route::post('/update_password', 'HomeController@updatePassword')->name('update_password');
+Route::get('/todo', 'TodoController@index')->name('todo_index');
