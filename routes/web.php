@@ -25,4 +25,6 @@ Route::post('/update_profile', 'HomeController@updateProfile')->name('update_pro
 Route::post('/update_password', 'HomeController@updatePassword')->name('update_password');
 Route::get('/todo', 'TodoController@index')->name('todo_index');
 Route::post('/todo', 'TodoController@store')->name('todo_store');
+Route::get('/list', 'GroceryController@index')->name('list_index');
+Route::post('/list', 'GroceryController@store')->name('list_store');
 
