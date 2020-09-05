@@ -28,3 +28,6 @@ Route::post('/todo', 'TodoController@store')->name('todo_store');
 Route::get('/list', 'GroceryController@index')->name('list_index');
 Route::post('/list', 'GroceryController@store')->name('list_store');
 
+Route::get('/video-game', 'VideoGameController@index')->name('video_game_index');
+Route::post('/video-game/store', 'VideoGameController@store')->name('video_game_store');
+

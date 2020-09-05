@@ -55,6 +55,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('list_index')}}">List</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('video_game_index')}}">Video Games</a>
+                            </li>
                             <li class="nav-item dropdown">
 
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
